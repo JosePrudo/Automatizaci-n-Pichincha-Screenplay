@@ -46,6 +46,8 @@ public class GenerarReporteSerenity implements TestExecutionListener {
         reporter.setSourceDirectory(directorio);
         reporter.setOutputDirectory(directorio);
         reporter.setProjectDirectory(System.getProperty("user.dir"));
+        // Sin esto no se generan las páginas de detalle de cada prueba (pasos y capturas).
+        reporter.setGenerateTestOutcomeReports();
         try {
             reporter.generateReportsForTestResultsFrom(directorio);
         } catch (IOException e) {
