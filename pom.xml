@@ -16,6 +16,8 @@
         <cucumber.version>8.0.4</cucumber.version>
         <junit.version>6.1.3</junit.version>
         <webdriver.driver>chrome</webdriver.driver>
+        <!-- Ejecutar un subconjunto: mvn clean verify -Dtags=@pareja -->
+        <tags>not @ignore</tags>
     </properties>
 
     <dependencyManagement>
@@ -120,8 +122,12 @@
                     <includes>
                         <include>**/*TestSuite.java</include>
                     </includes>
+                    <forkCount>1</forkCount>
+                    <reuseForks>true</reuseForks>
                     <systemPropertyVariables>
                         <webdriver.driver>${webdriver.driver}</webdriver.driver>
+                        <cucumber.filter.tags>${tags}</cucumber.filter.tags>
+                        <reporte.serenity.automatico>false</reporte.serenity.automatico>
                     </systemPropertyVariables>
                 </configuration>
                 <executions>
