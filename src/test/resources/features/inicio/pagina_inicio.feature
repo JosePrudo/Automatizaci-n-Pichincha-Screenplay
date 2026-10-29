@@ -8,3 +8,8 @@ Característica: Página de inicio de Banco Pichincha
   Escenario: Ingresar a la página de inicio
     Dado que "Jose" abre la página de inicio de Banco Pichincha
     Entonces debería ver que el título de la página contiene "Pichincha"
+
+  @smoke
+  Escenario: Ingresar a una URL indicada al inicio
+    Dado que "Jose" abre la URL "https://www.pichincha.com"
+    Entonces debería ver que el título de la página contiene "Pichincha"
