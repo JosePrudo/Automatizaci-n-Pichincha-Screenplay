@@ -5,12 +5,7 @@ Característica: Situación financiera
   Para personalizar mi crédito de vivienda
 
   Antecedentes:
-    Dado que "Jose" abre la URL "https://brave-mud-0605ba20f.3.azurestaticapps.net/"
-    Y selecciona la opción "Pareja" en tipo de aplicación
-    Y selecciona el tipo de vivienda "Apartamento"
-    Y selecciona la ciudad "Quito"
-    Y define el rango de precio entre "50000" y "1000000"
-    Y da clic en el botón Siguiente
+    Dado que "Jose" se encuentra en la sección "Tu situación financiera"
 
   @smoke @situacion-financiera
   Escenario: Completar la situación financiera como empleado casado

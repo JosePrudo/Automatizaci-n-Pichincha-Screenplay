@@ -4,9 +4,11 @@ Característica: Proyecto de vivienda
   Quiero indicar si aplico solo o en pareja
   Para simular mi crédito de vivienda
 
+  Antecedentes:
+    Dado que "Jose" se encuentra en la sección "Tu proyecto de vivienda"
+
   @smoke @pareja @apartamento-quito
   Escenario: Completar el proyecto de vivienda en pareja con apartamento en Quito
-    Dado que "Jose" abre la URL "https://brave-mud-0605ba20f.3.azurestaticapps.net/"
     Cuando selecciona la opción "Pareja" en tipo de aplicación
     Entonces debería ver la opción "Pareja" seleccionada
     Cuando selecciona el tipo de vivienda "Apartamento"
