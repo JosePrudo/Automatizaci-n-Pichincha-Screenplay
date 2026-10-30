@@ -1,5 +1,6 @@
 package com.pichincha.tasks;
 
+import com.pichincha.interactions.DesplazarHasta;
 import net.serenitybdd.annotations.Step;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
@@ -17,6 +18,9 @@ public class ContinuarAlSiguientePaso implements Task {
     @Override
     @Step("{0} da clic en el botón Siguiente")
     public <T extends Actor> void performAs(T actor) {
-        actor.attemptsTo(Click.on(BOTON_SIGUIENTE));
+        actor.attemptsTo(
+                DesplazarHasta.el(BOTON_SIGUIENTE),
+                Click.on(BOTON_SIGUIENTE)
+        );
     }
 }
